@@ -24,6 +24,33 @@ __Note:__ after the completion of each steps, you should make a commit with the 
 
 ### Create styles
 
-- In your `style.scss` file, add a class called `.loader` with a `#999` background color.
+- In your `style.scss` file add a selector `.loader` with
+  - a `#999` background color.
+  - a maximal width of `300px`
+  - a height of `24px`
+  - rounded corners (so that the left and right sides of the element look like 2 half circles)
+- Again in your `style.scss`, inside the declaration of `.loader`, add declaration for the `.progress` selector with:
+  - a `#333` background color
+  - margins of `2px`
+- In your HTML file, create a `div` element with the class `loader`.
+- Inside the `div.loader`, create an other `div` element with the class `progress`
 
-### Add some JavaScript
+<details>
+<summary>Result CSS</summary>
+
+The resulting CSS should look like:
+
+````css
+.loader {
+  /* loader styles */
+}
+
+.loader .progress {
+  /* loader progress styles */
+}
+````
+
+</details>
+
+### Create a template
+
