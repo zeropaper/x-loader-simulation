@@ -26,7 +26,7 @@ __Note:__ after the completion of each steps, you should make a commit with the 
 - Create the `index.js`, `style.scss` and an `index.html` file.  
   In your HTML file, instead of including `index.js`, you will use `bundle.js`  
   Don't forget to add a link tag to load `style.css` (not `style.scss`!).
-- Install browserify, jshint, mkdirp and cp with npm using the command `npm i --save-dev browserify mkdirp cp`
+- Install browserify, jshint, mkdirp and cp with npm using the command `npm i --save-dev node-sass browserify mkdirp cp`
 - In your `package.json` add a `script` called `prebuild` with `mkdirp docs && cp index.html docs/`. 
 - Again, in your `package.json`, add a `script` called `build` with `browserify index.js -o docs/bundle.js && node-sass style.scss docs/style.css`.
 - Run the following command to create the `bundle.js` file: `npm run build`.
@@ -60,7 +60,4 @@ The resulting CSS should look like:
 ````
 
 </details>
-
-### Add some JavaScript
-
 
