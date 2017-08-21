@@ -3,7 +3,7 @@
 ## Goal
 
 Illustrate the concepts of synchronous and asynchronous execution with callbacks and promises.
-This exercise also introduces build tools like [browserify](http://browserify.org/) and [node-sass](https://github.com/sass/node-sass) and the `package.json` script object.
+This exercise also introduces build tools like [jshint](http://jshint.com/), [browserify](http://browserify.org/) and [node-sass](https://github.com/sass/node-sass) and the `package.json` script object.
 
 An asynchronous execution happens when the result of a function call is not immediatly returned (e.g.: [fetch()](http://devdocs.io/dom/windoworworkerglobalscope/fetch) or [XMLHttpRequest](http://devdocs.io/dom/xmlhttprequest)).
 In those case, the script needs an other function to handle the rest of the process.
@@ -26,7 +26,7 @@ __Note:__ after the completion of each steps, you should make a commit with the 
 - Create the `index.js`, `style.scss` and an `index.html` file.  
   In your HTML file, instead of including `index.js`, you will use `bundle.js`  
   Don't forget to add a link tag to load `style.css` (not `style.scss`!).
-- Install browserify, mkdirp and cp with npm using the command `npm i --save-dev browserify`
+- Install browserify, jshint, mkdirp and cp with npm using the command `npm i --save-dev browserify mkdirp cp`
 - In your `package.json` add a `script` called `prebuild` with `mkdirp docs && cp index.html docs/`. 
 - Again, in your `package.json`, add a `script` called `build` with `browserify index.js -o docs/bundle.js && node-sass style.scss docs/style.css`.
 - Run the following command to create the `bundle.js` file: `npm run build`.
@@ -62,6 +62,5 @@ The resulting CSS should look like:
 </details>
 
 ### Add some JavaScript
-
 
 
