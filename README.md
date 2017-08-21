@@ -5,6 +5,15 @@
 Illustrate the concepts of synchronous and asynchronous execution with callbacks and promises.
 This exercise also introduces build tools like [browserify](http://browserify.org/) and [node-sass](https://github.com/sass/node-sass) and the `package.json` script object.
 
+An asynchronous execution happens when the result of a function call is not immediatly returned (e.g.: [fetch()](http://devdocs.io/dom/windoworworkerglobalscope/fetch) or [XMLHttpRequest](http://devdocs.io/dom/xmlhttprequest)).
+In those case, the script needs an other function to handle the rest of the process.
+It is a very common thing in modern JavaScript because it always happens when you make a request to a server or ask a user the permission to access some browser features.
+
+In this exercise, we will simulate the asynchronous execution by using `setTimeout()` and `setInterval()`.
+
+Sometimes, you have to work with events, which will use `object.addEventListener('<name-of-the-event>', callbackFunction)`.
+It has some similarities in the sense of that the `callbackFunction` is called when an event happens.
+
 __Note:__ after the completion of each steps, you should make a commit with the name of the step (and push it).
 
 ## Steps
@@ -52,5 +61,7 @@ The resulting CSS should look like:
 
 </details>
 
-### Create a template
+### Add some JavaScript
+
+
 
