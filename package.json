@@ -1,0 +1,32 @@
+{
+  "name": "x-loader-simulation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "## Goal",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "nodemon -w index.html -w index.js -w style.scss -es,scss,html -x \"npm run build\"",
+    "prebuild": "mkdirp docs && cp index.html docs/",
+    "build": "browserify index.js -o docs/bundle.js && node-sass style.scss > docs/style.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeropaper/x-loader-simulation.git"
+  },
+  "author": "Valentin Vago <zeropaper@irata.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeropaper/x-loader-simulation/issues"
+  },
+  "homepage": "https://github.com/zeropaper/x-loader-simulation#readme",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "cp": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "latest",
+    "simulate-progress": "zeropaper/xt-simulate-progress",
+    "uglify": "^0.1.5"
+  }
+}
