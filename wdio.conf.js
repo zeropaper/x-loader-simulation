@@ -1,3 +1,4 @@
+const CI = !!process.env.TRAVIS;
 exports.config = {
 
     //
@@ -52,7 +53,11 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 5,
         //
-        browserName: 'google-chrome'
+        browserName: 'chrome',
+        chromeOptions: {
+          args: CI ? ['--headless', '--disable-gpu', '--window-size=1280,800'] : [],
+          // binary: 'google-chrome'
+        }
     }],
     //
     // ===================
