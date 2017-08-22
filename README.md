@@ -90,7 +90,7 @@ The styles are not so great, change them to:
 
 ### Linting
 
-- Add the `jshint` to the `devDependency` of your `package.json` and run `npm i`.
+- Add the `jshint` (version `latest`) to the `devDependency` of your `package.json` and run `npm i`.
 - Add `jshint` to your `prebuild` script (before `mkdirp` using `&&`)
 - In your `index.js` add the following comment at the top of your file: `/* jshint browserify: true */`.  
   This comment instructs jshint to consider the file to be used with browserify.
@@ -104,7 +104,7 @@ The styles are not so great, change them to:
   node_js:
     - "8"
   ````
-- Change the `test` script of your `package.json` to `shint index.js` (normally, we would using a testing tool, but for now, we only do linting).
+- Change the `test` script of your `package.json` to `jshint index.js` (normally, we would using a testing tool, but for now, we only do linting).
 - Go on [travis-ci](https://travis-ci.org/) site, register and add the repository of this exercise.
 
 ### Minification
@@ -115,7 +115,7 @@ The styles are not so great, change them to:
 ### Scaling
 
 - Remove the `startSimulation` function call.
-- Put the `.progress` element inside a `div`
+- Put the `.loader` element inside a `div`
 - Add a button next tho the `.progress` element (inside the `div` you just created).
 - Add a `click` event listener to the button which will call the `startSimulation`.
 - Duplicate the `div` you created and __make changes to your JavaScript__ so that when the buttons are clicked they animate their respective progress bar.  
