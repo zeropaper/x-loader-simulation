@@ -61,3 +61,61 @@ The resulting CSS should look like:
 
 </details>
 
+### Add the simulator library
+
+- Edit your `package.json` and add `"simulate-progress": "zeropaper/xt-simulate-progress"` to the `devDependencies`
+- Run `npm i` (this will install the install the new dependency)
+- In your `index.js` add load `simulateProgress` using `var simulateProgress = require('simulate-progress');`.
+- Build your project (`npm run build`)
+
+__Note:_ It is rare (but it happens) that you will have to add a dependency like that (GitHub "username/repository-name").
+
+### Add some JavaScript
+
+- Create a function called `progressCallback`.  
+  This function takes 1 argument called `percent` and changes the side of the `.progress` (to reflect the percentage loaded).
+- Create a function called `finishCallback` which adds a class `finished` to the `.loader`.
+- Create a function called `startSimulation` which 
+  - Removes the `finished` class on the `.loader`
+  - Calls the `simulateProgress` function with the `progressCallback` and `finishCallback` functions as arguments.
+- Call the `startSimulation` function.
+
+### Improve the styles
+
+The styles are not so great, change them to:
+
+- Make it so that the `.loader` takes the same shape as `.progress` but slightly smaller so that 2px of the `.progress` element are visible (on every sides).
+- Add a `.finished` rule so that it turns the background color of the `.progress` to green.
+- Set the width of the `.loader` to `0%` by default
+
+### Linting
+
+- Add the `jshint` to the `devDependency` of your `package.json` and run `npm i`.
+- Add `jshint` to your `prebuild` script (before `mkdirp` using `&&`)
+- In your `index.js` add the following comment at the top of your file: `/* jshint browserify: true */`.  
+  This comment instructs jshint to consider the file to be used with browserify.
+  
+### Continuous integration
+
+- Create a `.travis.yml` file with the following content
+  ````yaml
+  language: node_js
+  dist: trusty
+  ````
+- Go on [travis-ci](https://travis-ci.org/) site, register and add the repository of this exercise.
+
+### Minification
+
+- Add the `uglify` to the `devDependency` of your `package.json` and run `npm i`.
+- Add a `postbuild` script to your `package.json` in which you you use `uglify` to minify the compiled `docs/bundle.js`.
+
+
+### Scaling
+
+- Remove the `startSimulation` function call.
+- Put the `.progress` element inside a `div`
+- Add a button next tho the `.progress` element (inside the `div` you just created).
+- Add a `click` event listener to the button which will call the `startSimulation`.
+- Duplicate the `div` you created and __make changes to your JavaScript__ so that when the buttons are clicked they animate their respective progress bar.  
+  Use `querySelectorAll` and `forEach`, use IDs is __NOT ALLOWED__ 😋
+  
