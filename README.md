@@ -99,8 +99,10 @@ The styles are not so great, change them to:
 
 - Create a `.travis.yml` file with the following content
   ````yaml
-  language: node_js
   dist: trusty
+  language: node_js
+  node_js:
+    - "8"
   ````
 - Change the `test` script of your `package.json` to `shint index.js` (normally, we would using a testing tool, but for now, we only do linting).
 - Go on [travis-ci](https://travis-ci.org/) site, register and add the repository of this exercise.
