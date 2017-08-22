@@ -115,7 +115,7 @@ The styles are not so great, change them to:
 ### Scaling
 
 - Remove the `startSimulation` function call.
-- Put the `.progress` element inside a `div`
+- Put the `.loader` element inside a `div`
 - Add a button next tho the `.progress` element (inside the `div` you just created).
 - Add a `click` event listener to the button which will call the `startSimulation`.
 - Duplicate the `div` you created and __make changes to your JavaScript__ so that when the buttons are clicked they animate their respective progress bar.  
