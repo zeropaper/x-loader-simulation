@@ -86,7 +86,7 @@ The styles are not so great, change them to:
 
 - Make it so that the `.loader` takes the same shape as `.progress` but slightly smaller so that 2px of the `.progress` element are visible (on every sides).
 - Add a `.finished` rule so that it turns the background color of the `.progress` to green.
-- Set the width of the `.loader` to `0%` by default
+- Set the width of the `.progress` to `0%` by default
 
 ### Linting
 
