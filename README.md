@@ -122,3 +122,10 @@ The styles are not so great, change them to:
   Use `querySelectorAll` and `forEach`, use IDs is __NOT ALLOWED__ 😋
   
 ![lame GIF](/progress.gif?raw=true "Should look more or less like that")
+
+### Cleanup
+
+It is not really elegant to have your source files (`index.js`, `index.html` and `style.scss`) at the root of your project.
+
+- Create a folder `src` and move your source files inside it.
+- Make the necessary changes to your `package.json`.
