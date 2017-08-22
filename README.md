@@ -94,19 +94,10 @@ The styles are not so great, change them to:
 - Add `jshint` to your `prebuild` script (before `mkdirp` using `&&`)
 - In your `index.js` add the following comment at the top of your file: `/* jshint browserify: true */`.  
   This comment instructs jshint to consider the file to be used with browserify.
-  
-### Continuous integration
-
-- Create a `.travis.yml` file with the following content
-  ````yaml
-  language: node_js
-  dist: trusty
-  ````
-- Go on [travis-ci](https://travis-ci.org/) site, register and add the repository of this exercise.
 
 ### Minification
 
-- Add the `uglify` to the `devDependency` of your `package.json` and run `npm i`.
+- Add the `uglify-js` to the `devDependency` of your `package.json` and run `npm i`.
 - Add a `postbuild` script to your `package.json` in which you you use `uglify` to minify the compiled `docs/bundle.js`.
 
 
