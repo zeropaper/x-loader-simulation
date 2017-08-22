@@ -119,3 +119,4 @@ The styles are not so great, change them to:
 - Duplicate the `div` you created and __make changes to your JavaScript__ so that when the buttons are clicked they animate their respective progress bar.  
   Use `querySelectorAll` and `forEach`, use IDs is __NOT ALLOWED__ 😋
   
+![lame GIF](/progress.gif?raw=true "Should look more or less like that")
