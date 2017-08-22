@@ -9,7 +9,7 @@
     "prebuild": "jshint index.js && mkdirp docs && cp index.html docs/",
     "build": "browserify index.js -o docs/bundle.js && node-sass style.scss > docs/style.css",
     "postbuild": "uglifyjs docs/bundle.js -o docs/bundle.js",
-    "test": "jshint index.js"
+    "test": "wdio wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,10 @@
     "node-sass": "^4.5.3",
     "nodemon": "latest",
     "simulate-progress": "zeropaper/xt-simulate-progress",
-    "uglify-js": "^3.0.28"
+    "uglify-js": "^3.0.28",
+    "wdio": "^0.3.3",
+    "wdio-mocha-framework": "^0.5.11",
+    "wdio-selenium-standalone-service": "0.0.9",
+    "wdio-spec-reporter": "^0.1.2"
   }
 }
