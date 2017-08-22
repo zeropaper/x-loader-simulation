@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build:dev": "nodemon -w index.html -w index.js -w style.scss -es,scss,html -x \"npm run build\"",
-    "prebuild": "mkdirp docs && cp index.html docs/",
+    "prebuild": "jshint index.js && mkdirp docs && cp index.html docs/",
     "build": "browserify index.js -o docs/bundle.js && node-sass style.scss > docs/style.css",
+    "postbuild": "uglifyjs docs/bundle.js -o docs/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,10 +24,11 @@
   "devDependencies": {
     "browserify": "^14.4.0",
     "cp": "^0.2.0",
+    "jshint": "latest",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.5.3",
     "nodemon": "latest",
     "simulate-progress": "zeropaper/xt-simulate-progress",
-    "uglify": "^0.1.5"
+    "uglify-js": "^3.0.28"
   }
 }
