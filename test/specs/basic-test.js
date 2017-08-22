@@ -2,7 +2,7 @@ var assert = require('assert');
 
 describe('Loader Simulation', function() {
   before(function() {
-    browser.url('http://localhost:8080');
+    browser.url('http://localhost:9090');
   });
 
   it('has at least 2 loaders', function() {
