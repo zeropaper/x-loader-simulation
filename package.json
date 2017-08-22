@@ -5,9 +5,9 @@
   "description": "## Goal",
   "main": "index.js",
   "scripts": {
-    "build:dev": "nodemon -w index.html -w index.js -w style.scss -es,scss,html -x \"npm run build\"",
-    "prebuild": "jshint index.js && mkdirp docs && cp index.html docs/",
-    "build": "browserify index.js -o docs/bundle.js && node-sass style.scss > docs/style.css",
+    "build:dev": "nodemon -w src/index.html -w src/index.js -w src/style.scss -es,scss,html -x \"npm run build\"",
+    "prebuild": "jshint src/index.js && mkdirp docs && cp src/index.html docs/",
+    "build": "browserify src/index.js -o docs/bundle.js && node-sass src/style.scss > docs/style.css",
     "postbuild": "uglifyjs docs/bundle.js -o docs/bundle.js",
     "test": "wdio wdio.conf.js"
   },
