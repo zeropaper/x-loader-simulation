@@ -116,9 +116,16 @@ The styles are not so great, change them to:
 
 - Remove the `startSimulation` function call.
 - Put the `.loader` element inside a `div`
-- Add a button next tho the `.progress` element (inside the `div` you just created).
+- Add a button next tho the `.loader` element (inside the `div` you just created).
 - Add a `click` event listener to the button which will call the `startSimulation`.
 - Duplicate the `div` you created and __make changes to your JavaScript__ so that when the buttons are clicked they animate their respective progress bar.  
   Use `querySelectorAll` and `forEach`, use IDs is __NOT ALLOWED__ 😋
   
 ![lame GIF](/progress.gif?raw=true "Should look more or less like that")
+
+### Cleanup
+
+It is not really elegant to have your source files (`index.js`, `index.html` and `style.scss`) at the root of your project.
+
+- Create a folder `src` and move your source files inside it.
+- Make the necessary changes to your `package.json`.
